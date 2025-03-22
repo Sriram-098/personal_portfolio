@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-.gap{
-  gap:0px;
+/* Ensure dark mode applies */
+.dark {
+  background-color: #111; /* Adjust as needed */
+  color: white;
 }

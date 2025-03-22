@@ -1,29 +1,54 @@
 import React from 'react';
 import Textchange from '../Projects/Textchange';
+import { Github, Linkedin } from 'lucide-react'; // Import Linkedin icon
 
 const Home = () => {
   return (
-    <div className="text-white md:px-20 flex justify-between w-full items-center p-10 md:p-20">
+    <div className="text-white flex justify-center items-center w-full h-screen p-10 md:p-20">
       {/* Left Section */}
-      <div className="md:w-2/4 md:pt-10 md:pb-10">
-        <h1 className="text-xl md:text-6xl font-bold flex leading-normal tracking-tighter pb-3">
-        <Textchange/>
+      <div className="text-center max-w-2xl">
+        {/* Dynamic Text */}
+        <h1 className="text-4xl md:text-6xl font-bold leading-normal tracking-tighter pb-3">
+          <Textchange />
         </h1>
-        <p className="text-sm md:text-2xl tracking-tight pb-8">
-          I’m a full-stack web developer with a passion for creating dynamic, user-friendly web applications. Currently, I am pursuing a B.Tech at Anil Neerukonda Institute of Technology and have experience working with technologies such as React, Node.js, Express, JavaScript, MySQL, and more.
+
+        {/* Description */}
+        <p className="text-lg md:text-2xl tracking-tight pb-8">
+          I love turning ideas into dynamic, user-friendly web applications, solving problems through code and creativity.
         </p>
-        <button className="rounded-md bg-[#465697] p-2 text-white">
-          Contact Me
-        </button>
-      </div>
-      
-      {/* Right Section (Image) */}
-      <div className="md:w-2/4">
-        <img className="w-full md:w-2/4 mx-auto" src="https://clipart-library.com/images_k/homework-clipart-transparent/homework-clipart-transparent-21.png" alt="Homework Illustration" />
+
+        {/* Contact Me Through Heading */}
+        <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
+          Contact Me Through
+        </h2>
+
+        {/* Buttons in one row */}
+        <div className="flex justify-center gap-6">
+          {/* GitHub Button */}
+          <a
+            href="https://github.com/Sriram-098" // Replace with your GitHub URL
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center rounded-md bg-[#465697] p-3 text-white w-32 h-12 hover:bg-[#374580] transition-all"
+          >
+            <Github size={20} className="mr-2" />
+            GitHub
+          </a>
+
+          {/* LinkedIn Button */}
+          <a
+            href="https://linkedin.com/in/sriram-senapathi-2b3b3b3b3" // Replace with your LinkedIn profile URL
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center rounded-md bg-[#465697] p-3 text-white w-32 h-12 hover:bg-[#374580] transition-all"
+          >
+            <Linkedin size={20} className="mr-2" />
+            LinkedIn
+          </a>
+        </div>
       </div>
     </div>
   );
 };
 
 export default Home;
-
